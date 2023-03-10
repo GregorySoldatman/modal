@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.modal {
+    /* display: none; */
+    position: fixed;
+        top: 0;
+        left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal__content {
+    background-color: #fff;
+    padding: 32px;
+    width: 280px;
+    height: 200px;
+}
