@@ -8,13 +8,22 @@
     <title>Modal</title>
 </head>
 <body>
-    <button class="open">Otwórz</button>
-    <div class="modal" id="modal1">
+    <button class="open-modal" data-modal="#modal1">Otwórz 1</button>
+    <div class="modal" id="modal1" style="display: none;">
         <div class="modal__content">
-            <h3 class="modal__title">To jest modal</h3>
+            <h3 class="modal__title">To jest modal 1</h3>
             <p class="modal__text">Lorem ipsum dolor sit amet.</p>
-            <button class="modal__cancel">Anuluj</button>
-            <button class="modal__confirm">Potwierdź</button>
+            <button class="modal__cancel" data-modal="#modal1">Anuluj</button>
+            <button class="modal__confirm" data-modal="#modal1">Potwierdź</button>
+        </div>
+    </div>
+    <button class="open-modal" data-modal="#modal2">Otwórz 2</button>
+    <div class="modal" id="modal2" style="display: none;">
+        <div class="modal__content">
+            <h3 class="modal__title">To jest modal 2</h3>
+            <p class="modal__text">Lorem ipsum dolor sit amet.</p>
+            <button class="modal__cancel" data-modal="#modal2">Anuluj</button>
+            <button class="modal__confirm" data-modal="#modal2">Potwierdź</button>
         </div>
     </div>
     <script src="./jej.js"></script>

@@ -2,14 +2,31 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body * {
     box-sizing: border-box;
 }
 
+button {
+    background-color: #386641;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+button:hover {
+    background-color: #46754f;
+    cursor: pointer;
+}
+
 .modal {
-    display: none;
+    display: flex;
+        justify-content: center;
+        align-items: center;
     position: fixed;
         top: 0;
         left: 0;
@@ -17,12 +34,30 @@ body * {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0);
+    transition: background-color .2s ease;
+    will-change: background-color;
 }
 
 .modal__content {
     background-color: #fff;
+    border-radius: 8px;
     padding: 32px;
     width: 280px;
     height: 200px;
+    transform: scale(0, 0);
+    transition: transform .2s ease;
+    will-change: transform;
+}
+
+.modal.active {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal.active .modal__content {
+    transform: scale(1, 1);
+}
+
+.modal__title {
+    margin: 0;
 }
